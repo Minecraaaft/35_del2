@@ -1,4 +1,4 @@
-package DieCup;
+package diceCup;
 
 public class Die {
 
