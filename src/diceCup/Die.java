@@ -8,6 +8,7 @@ public class Die {
 
     // Constructor
     public Die(){
+        int numberOfSides;
     }
 
     // generating a number from 1-6 and returning it
