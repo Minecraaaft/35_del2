@@ -1,4 +1,4 @@
-package DieCup;
+package diceCup;
 
 import java.util.Random;
 
