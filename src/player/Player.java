@@ -2,7 +2,7 @@ package player;
 
 public class Player {
 
-    // Attributter
+    // Attributes
     private String name;
 
 }

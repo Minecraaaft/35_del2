@@ -3,10 +3,10 @@ package diceCup;
 import java.util.Random;
 
 public class Die {
-    // Attributter
+    // Attributes
     private int faceValue;
 
-    // Konstruktør
+    // Constructor
     public Die(){
     }
 

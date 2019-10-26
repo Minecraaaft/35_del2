@@ -1,7 +1,7 @@
 package player;
 
 public class Balance {
-    //Attributter
+    //Attributes
     private int balance = 0;
 
     public void setBalance(int balance) {
