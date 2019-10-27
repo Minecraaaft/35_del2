@@ -1,13 +1,13 @@
 package message;
 
 public class Message {
-    private String language;
+    private static String language;
 
     public Message(String language) {
-        this.language = language;
+        Message.language = language;
     }
 
-    public String getMessage(String playerName) {
+    public static String getMessage(String playerName) {
         String message = "";
         switch (language) {
             case "English":
@@ -19,7 +19,7 @@ public class Message {
         return message;
     }
 
-    public String towerMessage() {
+    public static String towerMessage() {
         String message = "";
         switch (language) {
             case "English":
