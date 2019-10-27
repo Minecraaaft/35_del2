@@ -59,9 +59,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You bought a thermal jacket, and -20 have been withdrawn from your balance.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du købte en termojakke og -20 er trukket fra din pengebeholdning.";
         }
 
         return message;
@@ -71,9 +71,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You received your salary of +180, from your work at Walled City.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du modtog din løn af +180, fra dit arbejde i Walled City.";
         }
 
         return message;
