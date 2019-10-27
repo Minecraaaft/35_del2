@@ -23,9 +23,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You just found +250 in the tower!";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du har fundet +250 i tårnet!";
         }
 
         return message;
@@ -35,9 +35,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You -100 in a crater.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du tabte -100 i et krater.";
         }
 
         return message;
@@ -47,9 +47,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You picked up a +100 note on the ground in Palace Gates.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du samlede en +100 seddel op fra jorden i Palace Gates.";
         }
 
         return message;
