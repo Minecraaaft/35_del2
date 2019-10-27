@@ -31,7 +31,7 @@ public class Message {
         return message;
     }
 
-    public String craterMessage() {
+    public static String craterMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -43,7 +43,7 @@ public class Message {
         return message;
     }
 
-    public String palaceGatesMessage() {
+    public static String palaceGatesMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -55,7 +55,7 @@ public class Message {
         return message;
     }
 
-    public String coldDesertMessage() {
+    public static String coldDesertMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -67,7 +67,7 @@ public class Message {
         return message;
     }
 
-    public String walledCityMessage() {
+    public static String walledCityMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -79,7 +79,7 @@ public class Message {
         return message;
     }
 
-    public String monasteryMessage() {
+    public static String monasteryMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -91,7 +91,7 @@ public class Message {
         return message;
     }
 
-    public String blackCaveMessage() {
+    public static String blackCaveMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -103,7 +103,7 @@ public class Message {
         return message;
     }
 
-    public String hutsInTheMountainMessage() {
+    public static String hutsInTheMountainMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -115,7 +115,7 @@ public class Message {
         return message;
     }
 
-    public String theWerewallMessage() {
+    public static String theWerewallMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -127,7 +127,7 @@ public class Message {
         return message;
     }
 
-    public String thePitMessage() {
+    public static String thePitMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -139,7 +139,7 @@ public class Message {
         return message;
     }
 
-    public String goldMineMessage() {
+    public static String goldmineMessage() {
         String message = "";
         switch (language) {
             case "English":
