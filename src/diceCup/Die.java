@@ -5,16 +5,15 @@ import java.util.Random;
 public class Die {
     // Attributes
     private int faceValue;
+    private int sides;
 
     // Constructor
-    public Die(){
-        int numberOfSides;
-    }
+    public Die(int sides){ this.sides = sides; }
 
-    // generating a number from 1-6 and returning it
+    // generating a number from 1-sides and returning it
     public int roll(){
         Random random = new Random();
-        faceValue =random.nextInt(6)+1;
+        faceValue = random.nextInt(sides)+1;
         return faceValue;
     }
 
