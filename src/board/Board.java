@@ -19,6 +19,9 @@ public class Board {
             new Field("Goldmine", goldmineMessage(), 650, 10),
     };
 
+    public Board() {
+    }
+
     public String getFieldName(int fieldNumber) {
         String name = fields[fieldNumber].getName();
         return name;
