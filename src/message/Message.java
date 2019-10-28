@@ -83,9 +83,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You are living your life as a monk/nun, your balance remains the same.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du lever som en munk/nonne, din pengebeholdning forbliver uændret.";
         }
 
         return message;
