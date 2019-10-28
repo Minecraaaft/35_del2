@@ -107,9 +107,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You found a treasure chest containing +60.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du fandt en skattekiste indeholdende +60.";
         }
 
         return message;
