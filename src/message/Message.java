@@ -119,9 +119,10 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You just entered The Werewall! You have to throw the dice again to escape, cost -80.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du gik ind gennem varulve-væggen! Du skal kaste terningerne igen for at undslippe, " +
+                        "pris -80";
         }
 
         return message;
@@ -131,9 +132,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You fell down The Pit, a man will help you up, as long as you pay him 50.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du faldt ned i et hul, en mand vil hjælpe dig, så længe du betaler ham 50.";
         }
 
         return message;
@@ -143,9 +144,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "Jackpot! You just found a pot of gold, which you sell for +650!";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Jackpot! Du fandt en krukke fuld af guld, som du sælger for +650!";
         }
 
         return message;
