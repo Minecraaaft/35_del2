@@ -95,9 +95,9 @@ public class Message {
         String message = "";
         switch (language) {
             case "English":
-                message = "It's " +  "s turn.";
+                message = "You lost money from your pocket and can't find them in the black cave, you lost -70.";
             case "Dansk":
-                message = "Det er " + "s tur.";
+                message = "Du tabte penge fra din lomme og kan ikke finde dem i den mørke hule, du har mistet -70.";
         }
 
         return message;
