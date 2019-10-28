@@ -7,20 +7,20 @@ public class Player {
     private static int playerNumber;
     private Balance balance = new Balance();
     private int fieldPos;
-    private boolean hasLost;
+    private boolean hasWon;
 
     public Player(){
         this.name = "Player" + ++playerNumber;
         this.fieldPos = 0;
 
-        this.hasLost = false;
+        this.hasWon = false;
     }
 
-    public boolean isHasLost(){
-        return hasLost;
+    public boolean getHasWon(){
+        return hasWon;
     }
     //Setters
-    public void setHasLost(boolean hasLost){
-       this.hasLost = hasLost; 
+    public void setHasWon(boolean hasWon){
+       this.hasWon = hasWon;
     }
 }
