@@ -37,6 +37,10 @@ public class Player {
 
 
     //Setters
+
+    public void setName(String name) {
+        this.name = name;
+    }
     public void setHasWon(boolean hasWon){
        this.hasWon = hasWon;
     }

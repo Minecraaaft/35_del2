@@ -1,13 +1,30 @@
 package gameLogic;
 
 import diceCup.Die;
-import gui_fields.GUI_Field;
-import gui_fields.GUI_Shipping;
-import gui_fields.GUI_Start;
-import gui_fields.GUI_Street;
+import gui_fields.*;
 import gui_main.GUI;
+import message.Message;
+import player.Player;
+
+import java.awt.*;
 
 public class Game {
+    private Player player1 = new Player();
+    private Player player2 = new Player();
+    private GUI gui = new GUI();
+    private Message message;
+
+    public void start() {
+        String languageSelection = gui.getUserSelection("Choose language", "Dansk", "English");
+        this.message = new Message(languageSelection);
+
+        player1.setName(gui.getUserString("Player1: Enter name: "));
+        player2.setName(gui.getUserString("Player1: Enter name: "));
+
+        gui.addPlayer(new GUI_Player(player1.getName(), 1000));
+        gui.addPlayer(new GUI_Player(player2.getName(), 1000));
+
+    }
 
     public static void main(String[] args) {
         GUI_Field[] fields = new GUI_Field[22];
