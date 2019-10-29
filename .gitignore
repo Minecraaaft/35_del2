@@ -29,3 +29,5 @@ hs_err_pid*
 /.idea/workspace.xml
 /.idea/modules.xml
 /35_del2.iml
+.idea/$PRODUCT_WORKSPACE_FILE$
+
