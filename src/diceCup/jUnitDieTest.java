@@ -18,16 +18,16 @@ public class jUnitDieTest {
     }
 
     @org.junit.Test
-    //This test will test the probability of rolling the numbers 1-6 and compares it to the statistic value for 60000 rolls
+    /* This test will test the probability of rolling the numbers 1-6 and compares it
+       to the statistic value for 600000 rolls with both dice (1.2 million die rolls in total)*/
     public void rollInside() {
         Die d1 = new Die(6);
         Die d2 = new Die(6);
         float roll1 = 0F, roll2 = 0F, roll3 = 0F, roll4 = 0F, roll5 = 0F, roll6 = 0F;
         int antalRolls = 0;
-        int antalDice = 2;
         //            float array[] = {roll1,roll2,roll3,roll4,roll5,roll6};
 
-        for (int i = 1; i < 60001; i++) {
+        for (int i = 1; i < 600001; i++) {
             switch (d1.roll()) {
                 case 1:
                     roll1++;
@@ -86,28 +86,36 @@ public class jUnitDieTest {
             antalRolls++;
 
         }
-        assertEquals(antalRolls / 6., roll1, 400.*antalDice);
-        assertEquals(antalRolls / 6., roll2, 400.*antalDice);
-        assertEquals(antalRolls / 6., roll3, 400.*antalDice);
-        assertEquals(antalRolls / 6., roll4, 400.*antalDice);
-        assertEquals(antalRolls / 6., roll5, 400.*antalDice);
-        assertEquals(antalRolls / 6., roll6, 400.*antalDice);
+        assertEquals(antalRolls / 6., roll1, 1/150.*antalRolls);
+        assertEquals(antalRolls / 6., roll2, 1/150.*antalRolls);
+        assertEquals(antalRolls / 6., roll3, 1/150.*antalRolls);
+        assertEquals(antalRolls / 6., roll4, 1/150.*antalRolls);
+        assertEquals(antalRolls / 6., roll5, 1/150.*antalRolls);
+        assertEquals(antalRolls / 6., roll6, 1/150.*antalRolls);
         System.out.println("Number of 1's rolled: " + roll1 + ". The expected number is: " + (antalRolls / 6.) +
-                ". The difference is: " + Math.abs((antalRolls / 6. - roll1)) + " which is less than " + 400*antalDice);
+                " with the difference being " + Math.abs((antalRolls / 6. - roll1)) +
+                ". This is less than the expected difference of " + 1/150.*antalRolls);
 
         System.out.println("Number of 2's rolled: " + roll2 + ". The expected number is: " + (antalRolls / 6.) +
-                ". The difference is: " + Math.abs((antalRolls / 6. - roll2)) + " which is less than " + 400*antalDice);
+                " with the difference being " + Math.abs((antalRolls / 6. - roll2)) +
+                ". This is less than the expected difference of " + 1/150.*antalRolls);
 
         System.out.println("Number of 3's rolled: " + roll3 + ". The expected number is: " + (antalRolls / 6.) +
-                ". The difference is: " + Math.abs((antalRolls / 6. - roll3)) + " which is less than " + 400*antalDice);
+                " with the difference being " + Math.abs((antalRolls / 6. - roll3)) +
+                ". This is less than the expected difference of " + 1/150.*antalRolls);
 
         System.out.println("Number of 4's rolled: " + roll4 + ". The expected number is: " + (antalRolls / 6.) +
-                ". The difference is: " + Math.abs((antalRolls / 6. - roll4)) + " which is less than " + 400*antalDice);
+                " with the difference being " + Math.abs((antalRolls / 6. - roll4)) +
+                ". This is less than the expected difference of " + 1/150.*antalRolls);
 
         System.out.println("Number of 5's rolled: " + roll5 + ". The expected number is: " + (antalRolls / 6.) +
-                ". The difference is: " + Math.abs((antalRolls / 6. - roll5)) + " which is less than " + 400*antalDice);
+                " with the difference being " + Math.abs((antalRolls / 6. - roll5)) +
+                ". This is less than the expected difference of " + 1/150.*antalRolls);
 
         System.out.println("Number of 6's rolled: " + roll6 + ". The expected number is: " + (antalRolls / 6.) +
-                ". The difference is: " + Math.abs((antalRolls / 6. - roll6)) + " which is less than " + 400*antalDice);
+                " with the difference being " + Math.abs((antalRolls / 6. - roll6)) +
+                ". This is less than the expected difference of " + 1/150.*antalRolls);
+
+
     }
 }
