@@ -16,11 +16,34 @@ public class Player {
         this.hasWon = false;
     }
 
+    //method where you pay
+//    public Pay(){
+//
+//    }
+
+    //Getters
+    public Balance getBalance(){
+        return balance;
+    }
     public boolean getHasWon(){
         return hasWon;
     }
+    public int getFieldPos(){
+        return fieldPos;
+    }
+    public String getName(){
+        return name;
+    }
+
+
     //Setters
     public void setHasWon(boolean hasWon){
        this.hasWon = hasWon;
+    }
+    public void setFieldPos(int fieldPos){
+        this.fieldPos = fieldPos;
+    }
+    public void setBalance(int points){
+        balance.setBalance(balance.getBalance()+points);
     }
 }
