@@ -8,11 +8,15 @@ public class Message {
     }
 
     public Message() {
-
+        Message.language = "Dansk";
     }
 
     public void setLanguage(String language) {
         Message.language = language;
+    }
+
+    public String getLanguage() {
+        return language;
     }
 
     public String getEnterNameMessage(String playerName) {
