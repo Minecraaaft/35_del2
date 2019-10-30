@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 public class BoardTest {
     Board myTestBoard = new Board();
+    Message message = new Message();
 
     @org.junit.Before
     public void setUp() throws Exception {
@@ -17,26 +18,63 @@ public class BoardTest {
 
     @org.junit.Test
     public void getFieldName() {
-        assertEquals(myTestBoard.getFieldName(0), "Tower");
-        assertEquals(myTestBoard.getFieldName(1), "Crater");
-        assertEquals(myTestBoard.getFieldName(2), "Palace gates");
-        assertEquals(myTestBoard.getFieldName(3), "Cold Desert");
-        assertEquals(myTestBoard.getFieldName(4), "Walled city");
-        assertEquals(myTestBoard.getFieldName(5), "Monastery");
-        assertEquals(myTestBoard.getFieldName(6), "Black cave");
-        assertEquals(myTestBoard.getFieldName(7), "Huts in the mountain");
-        assertEquals(myTestBoard.getFieldName(8), "The Werewall (werewolf-wall)");
-        assertEquals(myTestBoard.getFieldName(9), "The pit");
-        assertEquals(myTestBoard.getFieldName(10), "Goldmine");
-
+        assertEquals("Tower", myTestBoard.getFieldName(0));
+        assertEquals("Crater", myTestBoard.getFieldName(1));
+        assertEquals("Palace gates", myTestBoard.getFieldName(2));
+        assertEquals("Cold Desert", myTestBoard.getFieldName(3));
+        assertEquals("Walled city", myTestBoard.getFieldName(4));
+        assertEquals("Monastery", myTestBoard.getFieldName(5));
+        assertEquals("Black cave", myTestBoard.getFieldName(6));
+        assertEquals("Huts in the mountain", myTestBoard.getFieldName(7));
+        assertEquals("The Werewall (werewolf-wall)", myTestBoard.getFieldName(8));
+        assertEquals("The pit", myTestBoard.getFieldName(9));
+        assertEquals("Goldmine", myTestBoard.getFieldName(10));
     }
 
     @org.junit.Test
     public void getFieldNumber() {
+        assertEquals(0, myTestBoard.getFieldNumber("Tower"));
+        assertEquals(1, myTestBoard.getFieldNumber("Crater"));
+        assertEquals(2, myTestBoard.getFieldNumber("Palace gates"));
+        assertEquals(3, myTestBoard.getFieldNumber("Cold Desert"));
+        assertEquals(4, myTestBoard.getFieldNumber("Walled city"));
+        assertEquals(5, myTestBoard.getFieldNumber("Monastery"));
+        assertEquals(6, myTestBoard.getFieldNumber("Black cave"));
+        assertEquals(7, myTestBoard.getFieldNumber("Huts in the mountain"));
+        assertEquals(8, myTestBoard.getFieldNumber("The Werewall (werewolf-wall)"));
+        assertEquals(9, myTestBoard.getFieldNumber("The pit"));
+        assertEquals(10, myTestBoard.getFieldNumber("Goldmine"));
     }
 
     @org.junit.Test
     public void getFieldMessage() {
+        message.setLanguage("Dansk");
+        assertEquals("Du har fundet +250 i tårnet!", myTestBoard.getFieldMessage(0));
+        assertEquals("Du tabte -100 i et krater.", myTestBoard.getFieldMessage(1));
+        assertEquals("Du samlede en +100 seddel op fra jorden i Palace Gates.", myTestBoard.getFieldMessage(2));
+        assertEquals("Du købte en termojakke og -20 er trukket fra din pengebeholdning.", myTestBoard.getFieldMessage(3));
+        assertEquals("Du modtog din løn af +180, fra dit arbejde i Walled City.", myTestBoard.getFieldMessage(4));
+        assertEquals("Du lever som en munk/nonne, din pengebeholdning forbliver uændret.", myTestBoard.getFieldMessage(5));
+        assertEquals("Du tabte penge fra din lomme og kan ikke finde dem i den mørke hule, du har mistet -70.", myTestBoard.getFieldMessage(6));
+        assertEquals("Du fandt en skattekiste indeholdende +60.", myTestBoard.getFieldMessage(7));
+        assertEquals("Du gik ind gennem varulve-væggen! Du skal kaste terningerne igen for at undslippe, " +
+                "pris -80", myTestBoard.getFieldMessage(8));
+        assertEquals("Du faldt ned i et hul, en mand vil hjælpe dig, så længe du betaler ham 50.", myTestBoard.getFieldMessage(9));
+        assertEquals("Jackpot! Du fandt en krukke fuld af guld, som du sælger for +650!", myTestBoard.getFieldMessage(10));
+
+        message.setLanguage("English");
+        assertEquals("You just found +250 in the tower!", myTestBoard.getFieldMessage(0));
+        assertEquals("You -100 in a crater.", myTestBoard.getFieldMessage(1));
+        assertEquals("You picked up a +100 note on the ground in Palace Gates.", myTestBoard.getFieldMessage(2));
+        assertEquals("You bought a thermal jacket, and -20 have been withdrawn from your balance.", myTestBoard.getFieldMessage(3));
+        assertEquals("You received your salary of +180, from your work at Walled City.", myTestBoard.getFieldMessage(4));
+        assertEquals("You are living your life as a monk/nun, your balance remains the same.", myTestBoard.getFieldMessage(5));
+        assertEquals("You lost money from your pocket and can't find them in the black cave, you lost -70.", myTestBoard.getFieldMessage(6));
+        assertEquals("You found a treasure chest containing +60.", myTestBoard.getFieldMessage(7));
+        assertEquals("You just entered The Werewall! You have to throw the dice again to escape, cost -80." +
+                "pris -80", myTestBoard.getFieldMessage(8));
+        assertEquals("You fell down The Pit, a man will help you up, as long as you pay him 50.", myTestBoard.getFieldMessage(9));
+        assertEquals("Jackpot! You just found a pot of gold, which you sell for +650!", myTestBoard.getFieldMessage(10));
     }
 
     @org.junit.Test
