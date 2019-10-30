@@ -16,27 +16,27 @@ public class Game {
             new GUI_Start(),
             new GUI_Start("1", "", "", new Color(240, 73, 55), Color.pink),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "250$", "", "", new Color(36, 155, 240), Color.BLACK),
+            new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "+250$ (2)", "", "", new Color(36, 155, 240), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Brewery("src/pictures/sandboxcrate.jpg", "Crater", "-100$", "", "", new Color(133, 204, 41), Color.BLACK),
+            new GUI_Brewery("src/pictures/sandboxcrate.jpg", "Crater", "-100$ (3)", "", "", new Color(133, 204, 41), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Brewery("src/pictures/palaceGates.jpg", "Palace Gates", " 100$", "", "", new Color(26, 227, 11), Color.BLACK),
+            new GUI_Brewery("src/pictures/palaceGates.jpg", "Palace Gates", "+100$ (4)", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Start("Tower", "100$","100$", Color.GRAY, Color.BLACK),
+            new GUI_Brewery("src/pictures/cold_desert.jpg", "Cold Desert","-20$ (5)", "", "", new Color(30, 230, 223), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "100$", "", "", new Color(26, 227, 11), Color.BLACK),
+            new GUI_Brewery("src/pictures/walled_city.jpg", "Walled City", "+180$ (6)", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Street(),
+            new GUI_Brewery("src/pictures/monastery.jpg", "Monastery", "+0$ (7)", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Street(),
+            new GUI_Brewery("src/pictures/black_cave.jpg", "Black Cave", "-70$ (8)", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Street(),
+            new GUI_Brewery("src/pictures/hut.jpg", "Huts in the Mountain", "+60$ (9)", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Street(),
+            new GUI_Brewery("src/pictures/werewall.jpg", "The Werewall", "-80$ (10)", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Street(),
+            new GUI_Brewery("src/pictures/pit.jpg", "The Pit", "-50$ (11)", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
-            new GUI_Street(),
+            new GUI_Brewery("src/pictures/goldmine.jpg", "Goldmine", "+650$ (12)", "", "", new Color(26, 227, 11), Color.BLACK),
     };
     private GUI gui = new GUI(fields);
     private Message message;
@@ -95,6 +95,8 @@ public class Game {
         gui.showMessage(board.getFieldMessage(fieldNumber));
 
         fields[player.getFieldPos()].removeAllCars();
+        if (dicecup.getFaceValueSum() == 11)
+            turn(player, GUIPlayer);
         gui.getUserButtonPressed(player.getName() + "s turn has ended.", "End turn");
 
         fields[player.getFieldPos() * 2 - 1].removeAllCars();
