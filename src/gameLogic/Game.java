@@ -1,7 +1,6 @@
 package gameLogic;
 
 import diceCup.DiceCup;
-import diceCup.Die;
 import gui_fields.*;
 import gui_main.GUI;
 import message.Message;
@@ -13,26 +12,30 @@ public class Game {
     private Player player1 = new Player();
     private Player player2 = new Player();
     GUI_Field[] fields = {
-                            new GUI_Start(),
-                             new GUI_Start("1", "", "", Color.BLACK, Color.pink),
-                            new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "250$", "", "", new Color(36, 155, 240), Color.BLACK),
-                            new GUI_Brewery("src/pictures/sandboxcrate.jpg", "Crater", "-100$", "", "", new Color(133, 204, 41), Color.BLACK),
-                            new GUI_Brewery("src/pictures/palaceGates.jpg", "Palace Gates", " 100$", "", "", new Color(26, 227, 11), Color.BLACK),
-                            new GUI_Start("Tower", "100$","100$", Color.GRAY, Color.BLACK),
-                            new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "100$", "", "", new Color(26, 227, 11), Color.BLACK),
-                            new GUI_Street(),
-                            new GUI_Street(),
-                            new GUI_Street(),
-                            new GUI_Street(),
-                            new GUI_Street(),
-                            new GUI_Street(),
+            new GUI_Start(),
+            new GUI_Start("1", "", "", new Color(240, 73, 55), Color.pink),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "250$", "", "", new Color(36, 155, 240), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Brewery("src/pictures/sandboxcrate.jpg", "Crater", "-100$", "", "", new Color(133, 204, 41), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Brewery("src/pictures/palaceGates.jpg", "Palace Gates", " 100$", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Start("Tower", "100$","100$", Color.GRAY, Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "100$", "", "", new Color(26, 227, 11), Color.BLACK),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Street(),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Street(),
+            new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Street(),
+            new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Street(),
+            new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Street(),
+            new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
+            new GUI_Street(),
     };
     private GUI gui = new GUI(fields);
     private Message message;
