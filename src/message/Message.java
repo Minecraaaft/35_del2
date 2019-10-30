@@ -11,6 +11,34 @@ public class Message {
 
     }
 
+    public String getEnterNameMessage(String playerName) {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = playerName + ": Enter name:";
+                break;
+            case "Dansk":
+                message = playerName + ": Indtast navn:";
+                break;
+        }
+
+        return message;
+    }
+
+    public String getRollDiceMessage() {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = "Roll dice";
+                break;
+            case "Dansk":
+                message = "Kast terninger";
+                break;
+        }
+
+        return message;
+    }
+
     public String getTurnMessage(String playerName) {
         String message = "";
         switch (language) {
