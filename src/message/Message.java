@@ -8,7 +8,7 @@ public class Message {
     }
 
     public Message() {
-
+        Message.language = "Dansk";
     }
 
     public void setLanguage(String language) {
