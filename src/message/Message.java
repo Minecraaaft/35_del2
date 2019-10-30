@@ -7,7 +7,11 @@ public class Message {
         Message.language = language;
     }
 
-    public static String getMessage(String playerName) {
+    public Message() {
+
+    }
+
+    public String getTurnMessage(String playerName) {
         String message = "";
         switch (language) {
             case "English":
@@ -21,7 +25,7 @@ public class Message {
         return message;
     }
 
-    public static String towerMessage() {
+    public String towerMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -35,7 +39,7 @@ public class Message {
         return message;
     }
 
-    public static String craterMessage() {
+    public String craterMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -49,7 +53,7 @@ public class Message {
         return message;
     }
 
-    public static String palaceGatesMessage() {
+    public String palaceGatesMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -63,7 +67,7 @@ public class Message {
         return message;
     }
 
-    public static String coldDesertMessage() {
+    public String coldDesertMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -77,7 +81,7 @@ public class Message {
         return message;
     }
 
-    public static String walledCityMessage() {
+    public String walledCityMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -91,7 +95,7 @@ public class Message {
         return message;
     }
 
-    public static String monasteryMessage() {
+    public String monasteryMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -105,7 +109,7 @@ public class Message {
         return message;
     }
 
-    public static String blackCaveMessage() {
+    public String blackCaveMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -119,7 +123,7 @@ public class Message {
         return message;
     }
 
-    public static String hutsInTheMountainMessage() {
+    public String hutsInTheMountainMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -133,7 +137,7 @@ public class Message {
         return message;
     }
 
-    public static String theWerewallMessage() {
+    public String theWerewallMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -148,7 +152,7 @@ public class Message {
         return message;
     }
 
-    public static String thePitMessage() {
+    public String thePitMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -162,7 +166,7 @@ public class Message {
         return message;
     }
 
-    public static String goldmineMessage() {
+    public String goldmineMessage() {
         String message = "";
         switch (language) {
             case "English":
