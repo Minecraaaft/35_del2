@@ -27,20 +27,21 @@ public class Game {
     }
 
     public static void main(String[] args) {
-        GUI_Field[] fields = new GUI_Field[22];
+        GUI_Field[] fields = new GUI_Field[12];
         fields[0] = new GUI_Start();
-        fields[1] = new GUI_Street();
-        fields[2] = new GUI_Street();
-        fields[3] = new GUI_Street();
-        fields[4] = new GUI_Street();
-        fields[5] = new GUI_Street();
+        fields[1] = new GUI_Refuge("src/pictures/towerPic.jpg", "Tower", " Tower 100$", "", Color.GRAY, Color.BLACK);
+
+        fields[2] = new GUI_Street("Tower", "100$", "", "", Color.GRAY, Color.BLACK);
+        fields[3] = new GUI_Jail("src/pictures/towerPic.jpg", "Tower", " Tower 100$", "", Color.GRAY, Color.BLACK);
+        fields[4] = new GUI_Start("Tower", "100$","100$", Color.GRAY, Color.BLACK);
+        fields[5] = new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "100$", "", "", new Color(36, 155, 240), Color.BLACK);
         fields[6] = new GUI_Street();
         fields[7] = new GUI_Street();
         fields[8] = new GUI_Street();
         fields[9] = new GUI_Street();
         fields[10] = new GUI_Street();
         fields[11] = new GUI_Street();
-        GUI.setNull_fields_allowed(true);
+//        GUI.setNull_fields_allowed(true);
         GUI gui = new GUI(fields);
         gui.setDice(3,3);
     }
