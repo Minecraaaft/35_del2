@@ -5,7 +5,7 @@ public class DiceCup {
     private int faceValueSum;
     private int firstDieValue;
     private int secondDieValue;
-    private int[] faceValueArray;
+    private int[] faceValueArray = new int[2];
 
     private Die firstDie = new Die(sideNumber);
     private Die secondDie = new Die(sideNumber);

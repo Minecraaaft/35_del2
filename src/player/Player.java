@@ -22,8 +22,8 @@ public class Player {
 //    }
 
     //Getters
-    public Balance getBalance(){
-        return balance;
+    public int getBalance(){
+        return balance.getBalance();
     }
     public boolean getHasWon(){
         return hasWon;
