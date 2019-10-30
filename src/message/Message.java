@@ -15,6 +15,10 @@ public class Message {
         Message.language = language;
     }
 
+    public String getLanguage() {
+        return language;
+    }
+
     public String getEnterNameMessage(String playerName) {
         String message = "";
         switch (language) {

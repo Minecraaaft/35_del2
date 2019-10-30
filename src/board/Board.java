@@ -1,26 +1,27 @@
 package board;
 
 import message.Message;
+import player.Player;
 
 import static message.Message.*;
 
 public class Board {
-    Message message = new Message();
-    Field[] fields = {
-            new Field("Tower", message.towerMessage(), 250, 0),
-            new Field("Crater", message.craterMessage(), -100, 1),
-            new Field("Palace gates", message.palaceGatesMessage(), 100, 2),
-            new Field("Cold Desert", message.coldDesertMessage(), -20, 3),
-            new Field("Walled city", message.walledCityMessage(), 180, 4),
-            new Field("Monastery", message.monasteryMessage(), 0, 5),
-            new Field("Black cave", message.blackCaveMessage(), -70, 6),
-            new Field("Huts in the mountain", message.hutsInTheMountainMessage(), 60, 7),
-            new Field("The Werewall (werewolf-wall)", message.theWerewallMessage(), -80, 8),
-            new Field("The pit", message.thePitMessage(), -50, 9),
-            new Field("Goldmine", message.goldmineMessage(), 650, 10),
-    };
+    Message message;
+    Field[] fields = new Field[11];
+    public Board(String language) {
+        message = new Message(language);
 
-    public Board() {
+        fields[0] = new Field("Tower", message.towerMessage(), 250, 0);
+        fields[1] = new Field("Crater", message.craterMessage(), -100, 1);
+        fields[2] = new Field("Palace gates", message.palaceGatesMessage(), 100, 2);
+        fields[3] = new Field("Cold Desert", message.coldDesertMessage(), -20, 3);
+        fields[4] = new Field("Walled city", message.walledCityMessage(), 180, 4);
+        fields[5] = new Field("Monastery", message.monasteryMessage(), 0, 5);
+        fields[6] = new Field("Black cave", message.blackCaveMessage(), -70, 6);
+        fields[7] = new Field("Huts in the mountain", message.hutsInTheMountainMessage(), 60, 7);
+        fields[8] = new Field("The Werewall (werewolf-wall)", message.theWerewallMessage(), -80, 8);
+        fields[9] = new Field("The pit", message.thePitMessage(), -50, 9);
+        fields[10] = new Field("Goldmine", message.goldmineMessage(), 650, 10);
     }
 
     public String getFieldName(int fieldNumber) {
@@ -39,7 +40,7 @@ public class Board {
     }
 
     public String getFieldMessage(int fieldNumber) {
-        String message = fields[fieldNumber - 2].getMessage();
+        String message = fields[fieldNumber].getMessage();
         return message;
     }
 
