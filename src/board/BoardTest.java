@@ -1,6 +1,7 @@
 package board;
 
 import message.Message;
+import org.junit.Before;
 
 import static org.junit.Assert.*;
 

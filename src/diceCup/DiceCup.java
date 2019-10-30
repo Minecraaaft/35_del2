@@ -14,11 +14,12 @@ public class DiceCup {
     public DiceCup(){
     }
 
-    public void rollDice(){
+    public int rollDice(){
         faceValueArray[0] = firstDie.roll();
         faceValueArray[1] = secondDie.roll();
 
         faceValueSum = faceValueArray[0] + faceValueArray[1];
+        return faceValueSum;
     }
 
     public int getFaceValueSum() {
