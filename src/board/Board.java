@@ -55,7 +55,7 @@ public class Board {
     }
 
     public int getFieldCashPrize(int fieldNumber) {
-        int cash = fields[fieldNumber - 2].getCashPrize();
+        int cash = fields[fieldNumber].getCashPrize();
         return cash;
     }
 

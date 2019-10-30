@@ -48,6 +48,6 @@ public class Player {
         this.fieldPos = fieldPos;
     }
     public void setBalance(int points){
-        balance.setBalance(balance.getBalance()+points);
+        balance.setBalance(points);
     }
 }

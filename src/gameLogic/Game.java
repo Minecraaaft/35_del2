@@ -1,5 +1,6 @@
 package gameLogic;
 
+import board.Board;
 import diceCup.DiceCup;
 import gui_fields.*;
 import gui_main.GUI;
@@ -39,6 +40,7 @@ public class Game {
     };
     private GUI gui = new GUI(fields);
     private Message message;
+    private Board board;
     private DiceCup dicecup = new DiceCup();
     GUI_Car car1 = new GUI_Car();
     GUI_Player GUIplayer1;
@@ -49,6 +51,7 @@ public class Game {
     public void start() {
         String languageSelection = gui.getUserSelection("Choose language", "Dansk", "English");
         this.message = new Message(languageSelection);
+        board = new Board(languageSelection);
 
         player1.setName(gui.getUserString(message.getEnterNameMessage(player1.getName())));
         player2.setName(gui.getUserString(message.getEnterNameMessage(player2.getName())));
@@ -72,22 +75,31 @@ public class Game {
     }
 
     public void turn(Player player, GUI_Player GUIPlayer) {
+        fields[0].setCar(GUIPlayer, true);
         gui.getUserButtonPressed(message.getTurnMessage(player.getName()),message.getRollDiceMessage());
 
         dicecup.rollDice();
         int[] diceValues = dicecup.getFaceValueArray();
 
-        fields[player.getFieldPos()].removeAllCars();
+        fields[0].removeAllCars();
         player.setFieldPos(dicecup.getFaceValueSum());
-        fields[player.getFieldPos()].setCar(GUIPlayer, true);
+        fields[player.getFieldPos() * 2 - 1].setCar(GUIPlayer, true);
 
         gui.setDice(diceValues[0], diceValues[1]);
 
-        gui.getUserButtonPressed("hey", "End turn");
+        //field number by index
+        int fieldNumber = player.getFieldPos() - 2;
+
+        player.setBalance(player.getBalance() + board.getFieldCashPrize(fieldNumber));
+        GUIPlayer.setBalance(player.getBalance());
+        gui.showMessage(board.getFieldMessage(fieldNumber));
 
         fields[player.getFieldPos()].removeAllCars();
-        player.setFieldPos(0);
-        fields[player.getFieldPos()].setCar(GUIPlayer, true);
+        gui.getUserButtonPressed(player.getName() + "s turn has ended.", "End turn");
+
+        fields[player.getFieldPos() * 2 - 1].removeAllCars();
+
+//        fields[player.getFieldPos()].setCar(GUIPlayer, true);
 
     }
 
