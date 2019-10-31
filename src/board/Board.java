@@ -6,8 +6,8 @@ import player.Player;
 import static message.Message.*;
 
 public class Board {
-    Message message;
-    Field[] fields = new Field[11];
+    private Message message;
+    private Field[] fields = new Field[11];
     public Board(String language) {
         message = new Message(language);
 

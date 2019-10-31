@@ -3,8 +3,6 @@ package diceCup;
 public class DiceCup {
     private int sideNumber = 6;
     private int faceValueSum;
-    private int firstDieValue;
-    private int secondDieValue;
     private int[] faceValueArray = new int[2];
 
     private Die firstDie = new Die(sideNumber);
