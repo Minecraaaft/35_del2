@@ -114,7 +114,6 @@ public class Game {
         //field number by index
         int fieldNumber = player.getFieldPos() - 2;
 
-
         player.setBalance(player.getBalance() + board.getFieldCashPrize(fieldNumber));
         GUIPlayer.setBalance(player.getBalance());
         gui.showMessage(board.getFieldMessage(fieldNumber));
