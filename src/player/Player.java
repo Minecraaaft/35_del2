@@ -9,7 +9,7 @@ public class Player {
     private int fieldPos;
     private boolean hasWon;
 
-    public Player(){
+    public Player() {
         this.name = "Player " + ++playerNumber;
         this.fieldPos = 0;
 
@@ -22,16 +22,16 @@ public class Player {
 //    }
 
     //Getters
-    public int getBalance(){
+    public int getBalance() {
         return balance.getBalance();
     }
-    public boolean getHasWon(){
+    public boolean getHasWon() {
         return hasWon;
     }
-    public int getFieldPos(){
+    public int getFieldPos() {
         return fieldPos;
     }
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -43,13 +43,13 @@ public class Player {
             return;
         this.name = name;
     }
-    public void setHasWon(boolean hasWon){
+    public void setHasWon(boolean hasWon) {
        this.hasWon = hasWon;
     }
-    public void setFieldPos(int fieldPos){
+    public void setFieldPos(int fieldPos) {
         this.fieldPos = fieldPos;
     }
-    public void setBalance(int points){
+    public void setBalance(int points) {
         this.balance.setBalance(points);
     }
 }
