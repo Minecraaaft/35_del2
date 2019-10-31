@@ -119,7 +119,6 @@ public class Game {
         fields[player.getFieldPos()].removeAllCars();
 
         if (player.getBalance() >= 3000) {
-            fields[player.getFieldPos() * 2 - 1].removeAllCars();
             player.setHasWon(true);
             gui.showMessage(message.getHasWonMessage(player.getName()));
 
@@ -127,6 +126,7 @@ public class Game {
         }
 
         if (dicecup.getFaceValueSum() == 11) {
+            fields[player.getFieldPos() * 2 - 1].removeAllCars();
             turn(player, GUIPlayer);
             return;
         }
