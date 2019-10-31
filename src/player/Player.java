@@ -10,7 +10,7 @@ public class Player {
     private boolean hasWon;
 
     public Player(){
-        this.name = "Player" + ++playerNumber;
+        this.name = "Player " + ++playerNumber;
         this.fieldPos = 0;
 
         this.hasWon = false;
@@ -39,6 +39,8 @@ public class Player {
     //Setters
 
     public void setName(String name) {
+        if (name.length() == 0)
+            return;
         this.name = name;
     }
     public void setHasWon(boolean hasWon){
@@ -48,6 +50,6 @@ public class Player {
         this.fieldPos = fieldPos;
     }
     public void setBalance(int points){
-        balance.setBalance(points);
+        this.balance.setBalance(points);
     }
 }
