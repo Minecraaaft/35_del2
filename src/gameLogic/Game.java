@@ -125,7 +125,7 @@ public class Game {
             return;
         }
 
-        if (dicecup.getFaceValueSum() == 11) {
+        if (dicecup.getFaceValueSum() == 10) {
             fields[player.getFieldPos() * 2 - 1].removeAllCars();
             turn(player, GUIPlayer);
             return;
