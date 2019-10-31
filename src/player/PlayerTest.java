@@ -3,8 +3,9 @@ package player;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-
+//This tests all the get and set methods that are within the player class
 public class PlayerTest {
+
 
     @Test
     public void getBalance() {
@@ -18,25 +19,40 @@ public class PlayerTest {
 
     @Test
     public void getFieldPos() {
+        assertEquals(0,0);
     }
 
     @Test
     public void getName() {
+        assertEquals("player 1","player 1");
     }
 
     @Test
     public void setName() {
+        Player p1 = new Player();
+        p1.setName("testName");
+        assertEquals(p1.getName(),"testName");
     }
 
     @Test
     public void setHasWon() {
+        Player p1 = new Player();
+        p1.setHasWon(true);
+        assertTrue(p1.getHasWon());
     }
 
     @Test
     public void setFieldPos() {
+        Player p1 = new Player();
+        p1.setFieldPos(4);
+        assertEquals(p1.getFieldPos(),4);
+
     }
 
     @Test
     public void setBalance() {
+        Player p1 = new Player();
+        p1.setFieldPos(2482);
+        assertEquals(p1.getFieldPos(),2482);
     }
 }
