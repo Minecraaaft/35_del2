@@ -10,6 +10,8 @@ public class DiceCupTest {
 
     DiceCup myTestDicecup = new DiceCup();
 
+
+    //JUnit test of rollDice and rollDiceOutcome
     @Test
     public void rollDice() {
         for (int i = 0; i < 10000; i++) {

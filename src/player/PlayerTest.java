@@ -3,7 +3,7 @@ package player;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-//This tests all the get and set methods that are within the player class
+//This tests all the get and set methods that are within the player class by using
 public class PlayerTest {
 
 
