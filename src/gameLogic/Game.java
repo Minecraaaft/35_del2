@@ -49,10 +49,12 @@ public class Game {
 
 
     public void start() {
+        //language is choosen
         String languageSelection = gui.getUserSelection("Choose language", "Dansk", "English");
         this.message = new Message(languageSelection);
         board = new Board(languageSelection);
 
+        //players are declared
         player1.setName(gui.getUserString(message.getEnterNameMessage(player1.getName())));
         player2.setName(gui.getUserString(message.getEnterNameMessage(player2.getName())));
 
@@ -89,6 +91,7 @@ public class Game {
 
         gui.setDice(diceValues[0], 5, 5, diceValues[1], 7, 7);
 
+        //this section for the animation of the car movement
         fields[0].removeAllCars();
         player.setFieldPos(1);
         for (int i = player.getFieldPos(); i <= dicecup.getFaceValueSum(); i++) {
@@ -97,7 +100,7 @@ public class Game {
             fields[player.getFieldPos() * 2 - 1].setCar(GUIPlayer, true);
 
             try {
-                Thread.sleep(300);
+                Thread.sleep(300);      //makes the program wait 300 miliseconds/0.3 seconds
             } catch (Exception e) {
 
             }
@@ -108,9 +111,9 @@ public class Game {
         }
 
 
-
         //field number by index
         int fieldNumber = player.getFieldPos() - 2;
+
 
         player.setBalance(player.getBalance() + board.getFieldCashPrize(fieldNumber));
         GUIPlayer.setBalance(player.getBalance());
@@ -118,6 +121,7 @@ public class Game {
 
         fields[player.getFieldPos()].removeAllCars();
 
+        //winning condition
         if (player.getBalance() >= 3000) {
             player.setHasWon(true);
             gui.showMessage(message.getHasWonMessage(player.getName()));
@@ -125,6 +129,7 @@ public class Game {
             return;
         }
 
+        //extra turn condition
         if (dicecup.getFaceValueSum() == 10) {
             fields[player.getFieldPos() * 2 - 1].removeAllCars();
             turn(player, GUIPlayer);
@@ -132,7 +137,6 @@ public class Game {
         }
 
         gui.getUserButtonPressed(message.getEndTurnMessage(player.getName()), message.getEndMessage());
-
         fields[player.getFieldPos() * 2 - 1].removeAllCars();
 
     }
