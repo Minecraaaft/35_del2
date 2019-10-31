@@ -58,12 +58,11 @@ public class Game {
         player1.setName(gui.getUserString(message.getEnterNameMessage(player1.getName())));
         player2.setName(gui.getUserString(message.getEnterNameMessage(player2.getName())));
 
-        if (player1.getName() == player2.getName()) {
-            player2.setName("Bob");
+        if (player1.getName().equals(player2.getName())) {
+            player2.setName("Minecraaaft");
         }
 
         GUIplayer1 = new GUI_Player(player1.getName(), player1.getBalance(), car1);
-
         GUIplayer2 = new GUI_Player(player2.getName(), player2.getBalance(), car2);
 
         gui.addPlayer(GUIplayer1);
