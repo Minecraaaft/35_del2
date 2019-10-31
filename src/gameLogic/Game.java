@@ -13,7 +13,7 @@ public class Game {
     private Player player1 = new Player();
     private Player player2 = new Player();
     GUI_Field[] fields = {
-            new GUI_Start(),
+            new GUI_Start("START", "", "", Color.RED , Color.BLACK),
             new GUI_Start("1", "", "", new Color(240, 73, 55), Color.pink),
             new GUI_Start("Void", "", "", Color.BLACK, Color.BLACK),
             new GUI_Brewery("src/pictures/towerPic(1).jpg", "Tower", "+250$ (2)", "", "", new Color(36, 155, 240), Color.BLACK),
