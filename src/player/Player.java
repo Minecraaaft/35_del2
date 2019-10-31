@@ -16,10 +16,6 @@ public class Player {
         this.hasWon = false;
     }
 
-    //method where you pay
-//    public Pay(){
-//
-//    }
 
     //Getters
     public int getBalance() {
@@ -37,7 +33,6 @@ public class Player {
 
 
     //Setters
-
     public void setName(String name) {
         if (name.length() == 0)
             return;
