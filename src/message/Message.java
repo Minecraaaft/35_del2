@@ -7,7 +7,47 @@ public class Message {
         Message.language = language;
     }
 
-    public static String getMessage(String playerName) {
+    public Message() {
+        Message.language = "Dansk";
+    }
+
+    public void setLanguage(String language) {
+        Message.language = language;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public String getEnterNameMessage(String playerName) {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = playerName + ": Enter name:";
+                break;
+            case "Dansk":
+                message = playerName + ": Indtast navn:";
+                break;
+        }
+
+        return message;
+    }
+
+    public String getRollDiceMessage() {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = "Roll dice";
+                break;
+            case "Dansk":
+                message = "Kast terninger";
+                break;
+        }
+
+        return message;
+    }
+
+    public String getTurnMessage(String playerName) {
         String message = "";
         switch (language) {
             case "English":
@@ -21,7 +61,35 @@ public class Message {
         return message;
     }
 
-    public static String towerMessage() {
+    public String getEndTurnMessage(String playerName) {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = playerName + "s turn has ended.";
+                break;
+            case "Dansk":
+                message = playerName + "s tur er slut.";
+                break;
+        }
+
+        return message;
+    }
+
+    public String getEndMessage() {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = "End turn";
+                break;
+            case "Dansk":
+                message = "Afslut tur";
+                break;
+        }
+
+        return message;
+    }
+
+    public String towerMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -35,7 +103,7 @@ public class Message {
         return message;
     }
 
-    public static String craterMessage() {
+    public String craterMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -49,7 +117,7 @@ public class Message {
         return message;
     }
 
-    public static String palaceGatesMessage() {
+    public String palaceGatesMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -63,7 +131,7 @@ public class Message {
         return message;
     }
 
-    public static String coldDesertMessage() {
+    public String coldDesertMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -77,7 +145,7 @@ public class Message {
         return message;
     }
 
-    public static String walledCityMessage() {
+    public String walledCityMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -91,7 +159,7 @@ public class Message {
         return message;
     }
 
-    public static String monasteryMessage() {
+    public String monasteryMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -105,7 +173,7 @@ public class Message {
         return message;
     }
 
-    public static String blackCaveMessage() {
+    public String blackCaveMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -119,7 +187,7 @@ public class Message {
         return message;
     }
 
-    public static String hutsInTheMountainMessage() {
+    public String hutsInTheMountainMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -133,7 +201,7 @@ public class Message {
         return message;
     }
 
-    public static String theWerewallMessage() {
+    public String theWerewallMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -148,7 +216,7 @@ public class Message {
         return message;
     }
 
-    public static String thePitMessage() {
+    public String thePitMessage() {
         String message = "";
         switch (language) {
             case "English":
@@ -162,7 +230,7 @@ public class Message {
         return message;
     }
 
-    public static String goldmineMessage() {
+    public String goldmineMessage() {
         String message = "";
         switch (language) {
             case "English":
