@@ -75,6 +75,8 @@ public class Game {
             }
             turn(player2, GUIplayer2);
         }
+
+        gui.setDice(6,6);
     }
 
     public void turn(Player player, GUI_Player GUIPlayer) {
@@ -115,8 +117,18 @@ public class Game {
         gui.showMessage(board.getFieldMessage(fieldNumber));
 
         fields[player.getFieldPos()].removeAllCars();
-        if (dicecup.getFaceValueSum() == 11)
+
+        if (player.getBalance() >= 3000) {
+            player.setHasWon(true);
+            gui.showMessage(message.getHasWonMessage(player.getName()));
+            return;
+        }
+
+        if (dicecup.getFaceValueSum() == 11) {
             turn(player, GUIPlayer);
+            return;
+        }
+
         gui.getUserButtonPressed(message.getEndTurnMessage(player.getName()), message.getEndMessage());
 
         fields[player.getFieldPos() * 2 - 1].removeAllCars();
