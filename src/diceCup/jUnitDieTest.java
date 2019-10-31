@@ -92,29 +92,29 @@ public class jUnitDieTest {
         assertEquals(antalRolls / 6., roll4, 1/150.*antalRolls);
         assertEquals(antalRolls / 6., roll5, 1/150.*antalRolls);
         assertEquals(antalRolls / 6., roll6, 1/150.*antalRolls);
-        System.out.println("Number of 1's rolled: " + roll1 + ". The expected number is: " + (antalRolls / 6.) +
-                " with the difference being " + Math.abs((antalRolls / 6. - roll1)) +
-                ". This is less than the expected difference of " + 1/150.*antalRolls);
-
-        System.out.println("Number of 2's rolled: " + roll2 + ". The expected number is: " + (antalRolls / 6.) +
-                " with the difference being " + Math.abs((antalRolls / 6. - roll2)) +
-                ". This is less than the expected difference of " + 1/150.*antalRolls);
-
-        System.out.println("Number of 3's rolled: " + roll3 + ". The expected number is: " + (antalRolls / 6.) +
-                " with the difference being " + Math.abs((antalRolls / 6. - roll3)) +
-                ". This is less than the expected difference of " + 1/150.*antalRolls);
-
-        System.out.println("Number of 4's rolled: " + roll4 + ". The expected number is: " + (antalRolls / 6.) +
-                " with the difference being " + Math.abs((antalRolls / 6. - roll4)) +
-                ". This is less than the expected difference of " + 1/150.*antalRolls);
-
-        System.out.println("Number of 5's rolled: " + roll5 + ". The expected number is: " + (antalRolls / 6.) +
-                " with the difference being " + Math.abs((antalRolls / 6. - roll5)) +
-                ". This is less than the expected difference of " + 1/150.*antalRolls);
-
-        System.out.println("Number of 6's rolled: " + roll6 + ". The expected number is: " + (antalRolls / 6.) +
-                " with the difference being " + Math.abs((antalRolls / 6. - roll6)) +
-                ". This is less than the expected difference of " + 1/150.*antalRolls);
+//        System.out.println("Number of 1's rolled: " + roll1 + ". The expected number is: " + (antalRolls / 6.) +
+//                " with the difference being " + Math.abs((antalRolls / 6. - roll1)) +
+//                ". This is less than the expected difference of " + 1/150.*antalRolls);
+//
+//        System.out.println("Number of 2's rolled: " + roll2 + ". The expected number is: " + (antalRolls / 6.) +
+//                " with the difference being " + Math.abs((antalRolls / 6. - roll2)) +
+//                ". This is less than the expected difference of " + 1/150.*antalRolls);
+//
+//        System.out.println("Number of 3's rolled: " + roll3 + ". The expected number is: " + (antalRolls / 6.) +
+//                " with the difference being " + Math.abs((antalRolls / 6. - roll3)) +
+//                ". This is less than the expected difference of " + 1/150.*antalRolls);
+//
+//        System.out.println("Number of 4's rolled: " + roll4 + ". The expected number is: " + (antalRolls / 6.) +
+//                " with the difference being " + Math.abs((antalRolls / 6. - roll4)) +
+//                ". This is less than the expected difference of " + 1/150.*antalRolls);
+//
+//        System.out.println("Number of 5's rolled: " + roll5 + ". The expected number is: " + (antalRolls / 6.) +
+//                " with the difference being " + Math.abs((antalRolls / 6. - roll5)) +
+//                ". This is less than the expected difference of " + 1/150.*antalRolls);
+//
+//        System.out.println("Number of 6's rolled: " + roll6 + ". The expected number is: " + (antalRolls / 6.) +
+//                " with the difference being " + Math.abs((antalRolls / 6. - roll6)) +
+//                ". This is less than the expected difference of " + 1/150.*antalRolls);
 
 
     }
