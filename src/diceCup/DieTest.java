@@ -2,7 +2,7 @@ package diceCup;
 
 import static org.junit.Assert.*;
 
-public class jUnitDieTest {
+public class DieTest {
     int nsides = 6; //sides on die
 
     @org.junit.Test
