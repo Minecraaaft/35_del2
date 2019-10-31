@@ -121,6 +121,7 @@ public class Game {
         if (player.getBalance() >= 3000) {
             player.setHasWon(true);
             gui.showMessage(message.getHasWonMessage(player.getName()));
+            fields[player.getFieldPos() * 2 - 1].removeAllCars();
             return;
         }
 
