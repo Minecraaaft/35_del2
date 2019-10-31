@@ -11,10 +11,10 @@ public class DiceCup {
     private Die secondDie = new Die(sideNumber);
 
     //Constructor
-    public DiceCup(){
+    public DiceCup() {
     }
 
-    public int rollDice(){
+    public int rollDice() {
         faceValueArray[0] = firstDie.roll();
         faceValueArray[1] = secondDie.roll();
 

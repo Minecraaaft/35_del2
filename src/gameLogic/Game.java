@@ -62,6 +62,9 @@ public class Game {
         gui.addPlayer(GUIplayer1);
         gui.addPlayer(GUIplayer2);
 
+        car1.setPrimaryColor(Color.YELLOW);
+        car2.setPrimaryColor(Color.RED);
+
         fields[0].setCar(GUIplayer1, true);
         fields[0].setCar(GUIplayer2, true);
 
@@ -72,6 +75,8 @@ public class Game {
             }
             turn(player2, GUIplayer2);
         }
+
+        gui.setDice(6,6);
     }
 
     public void turn(Player player, GUI_Player GUIPlayer) {
@@ -81,7 +86,8 @@ public class Game {
 
         dicecup.rollDice();
         int[] diceValues = dicecup.getFaceValueArray();
-        System.out.println( dicecup.getFaceValueSum());
+
+        gui.setDice(diceValues[0], 5, 5, diceValues[1], 7, 7);
 
         fields[0].removeAllCars();
         player.setFieldPos(1);
@@ -101,7 +107,7 @@ public class Game {
             fields[player.getFieldPos() * 2 - 1].removeAllCars();
         }
 
-        gui.setDice(diceValues[0], diceValues[1]);
+
 
         //field number by index
         int fieldNumber = player.getFieldPos() - 2;
@@ -111,8 +117,18 @@ public class Game {
         gui.showMessage(board.getFieldMessage(fieldNumber));
 
         fields[player.getFieldPos()].removeAllCars();
-        if (dicecup.getFaceValueSum() == 11)
+
+        if (player.getBalance() >= 3000) {
+            player.setHasWon(true);
+            gui.showMessage(message.getHasWonMessage(player.getName()));
+            return;
+        }
+
+        if (dicecup.getFaceValueSum() == 11) {
             turn(player, GUIPlayer);
+            return;
+        }
+
         gui.getUserButtonPressed(message.getEndTurnMessage(player.getName()), message.getEndMessage());
 
         fields[player.getFieldPos() * 2 - 1].removeAllCars();

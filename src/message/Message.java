@@ -33,6 +33,20 @@ public class Message {
         return message;
     }
 
+    public String getHasWonMessage(String playerName) {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = playerName + " won!";
+                break;
+            case "Dansk":
+                message = playerName + " vandt!";
+                break;
+        }
+
+        return message;
+    }
+
     public String getRollDiceMessage() {
         String message = "";
         switch (language) {
