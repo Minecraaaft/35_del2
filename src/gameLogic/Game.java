@@ -62,6 +62,9 @@ public class Game {
         gui.addPlayer(GUIplayer1);
         gui.addPlayer(GUIplayer2);
 
+        car1.setPrimaryColor(Color.YELLOW);
+        car2.setPrimaryColor(Color.RED);
+
         fields[0].setCar(GUIplayer1, true);
         fields[0].setCar(GUIplayer2, true);
 
@@ -81,7 +84,8 @@ public class Game {
 
         dicecup.rollDice();
         int[] diceValues = dicecup.getFaceValueArray();
-        System.out.println( dicecup.getFaceValueSum());
+
+        gui.setDice(diceValues[0], 5, 5, diceValues[1], 7, 7);
 
         fields[0].removeAllCars();
         player.setFieldPos(1);
@@ -101,7 +105,7 @@ public class Game {
             fields[player.getFieldPos() * 2 - 1].removeAllCars();
         }
 
-        gui.setDice(diceValues[0], diceValues[1]);
+
 
         //field number by index
         int fieldNumber = player.getFieldPos() - 2;
