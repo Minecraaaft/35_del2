@@ -76,14 +76,30 @@ public class Game {
 
     public void turn(Player player, GUI_Player GUIPlayer) {
         fields[0].setCar(GUIPlayer, true);
+        player.setFieldPos(0);
         gui.getUserButtonPressed(message.getTurnMessage(player.getName()),message.getRollDiceMessage());
 
         dicecup.rollDice();
         int[] diceValues = dicecup.getFaceValueArray();
+        System.out.println( dicecup.getFaceValueSum());
 
         fields[0].removeAllCars();
-        player.setFieldPos(dicecup.getFaceValueSum());
-        fields[player.getFieldPos() * 2 - 1].setCar(GUIPlayer, true);
+        player.setFieldPos(1);
+        for (int i = player.getFieldPos(); i <= dicecup.getFaceValueSum(); i++) {
+
+            player.setFieldPos(i);
+            fields[player.getFieldPos() * 2 - 1].setCar(GUIPlayer, true);
+
+            try {
+                Thread.sleep(300);
+            } catch (Exception e) {
+
+            }
+
+            if (player.getFieldPos() == dicecup.getFaceValueSum())
+                break;
+            fields[player.getFieldPos() * 2 - 1].removeAllCars();
+        }
 
         gui.setDice(diceValues[0], diceValues[1]);
 
@@ -97,11 +113,9 @@ public class Game {
         fields[player.getFieldPos()].removeAllCars();
         if (dicecup.getFaceValueSum() == 11)
             turn(player, GUIPlayer);
-        gui.getUserButtonPressed(player.getName() + "s turn has ended.", "End turn");
+        gui.getUserButtonPressed(message.getEndTurnMessage(player.getName()), message.getEndMessage());
 
         fields[player.getFieldPos() * 2 - 1].removeAllCars();
-
-//        fields[player.getFieldPos()].setCar(GUIPlayer, true);
 
     }
 

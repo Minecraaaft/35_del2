@@ -61,6 +61,34 @@ public class Message {
         return message;
     }
 
+    public String getEndTurnMessage(String playerName) {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = playerName + "s turn has ended.";
+                break;
+            case "Dansk":
+                message = playerName + "s tur er slut.";
+                break;
+        }
+
+        return message;
+    }
+
+    public String getEndMessage() {
+        String message = "";
+        switch (language) {
+            case "English":
+                message = "End turn";
+                break;
+            case "Dansk":
+                message = "Afslut tur";
+                break;
+        }
+
+        return message;
+    }
+
     public String towerMessage() {
         String message = "";
         switch (language) {
