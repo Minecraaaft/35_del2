@@ -31,7 +31,6 @@ public class Player {
         return name;
     }
 
-
     //Setters
     public void setName(String name) {
         if (name.length() == 0)
@@ -47,4 +46,5 @@ public class Player {
     public void setBalance(int points) {
         this.balance.setBalance(points);
     }
+    public static void setPlayerNumber(int playerNumber) { Player.playerNumber = playerNumber; }
 }

@@ -9,6 +9,8 @@ public class PlayerTest {
 
     @Test
     public void getName() {
+        Player.setPlayerNumber(0);
+
         Player p1 = new Player();
         Player p2 = new Player();
 
