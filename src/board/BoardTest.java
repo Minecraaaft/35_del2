@@ -90,18 +90,17 @@ public class BoardTest {
         assertEquals("Jackpot! Du fandt en krukke fuld af guld, som du sælger for +650!", myTestBoard.getFieldMessage("Goldmine"));
 
         Board myTestBoard2 = new Board("English");
-        assertEquals("You just found +250 in the tower!", myTestBoard.getFieldMessage("Tower"));
-        assertEquals("You -100 in a crater.", myTestBoard.getFieldMessage("Palace gates"));
-        assertEquals("You picked up a +100 note on the ground in Palace Gates.", myTestBoard.getFieldMessage("Cold Desert"));
-        assertEquals("You bought a thermal jacket, and -20 have been withdrawn from your balance.", myTestBoard.getFieldMessage("Walled city"));
-        assertEquals("You received your salary of +180, from your work at Walled City.", myTestBoard.getFieldMessage("Monastery"));
-        assertEquals("You are living your life as a monk/nun, your balance remains the same.", myTestBoard.getFieldMessage("Black cave"));
-        assertEquals("You lost money from your pocket and can't find them in the black cave, you lost -70.", myTestBoard.getFieldMessage("Black cave"));
-        assertEquals("You found a treasure chest containing +60.", myTestBoard.getFieldMessage("Huts in the mountain"));
-        assertEquals("You just entered The Werewall! You have to throw the dice again to escape, cost -80." +
-                "pris -80", myTestBoard.getFieldMessage("The Werewall (werewolf-wall)"));
-        assertEquals("You fell down The Pit, a man will help you up, as long as you pay him 50.", myTestBoard.getFieldMessage("The pit"));
-        assertEquals("Jackpot! You just found a pot of gold, which you sell for +650!", myTestBoard.getFieldMessage("Goldmine"));
+        assertEquals("You just found +250 in the tower!", myTestBoard2.getFieldMessage("Tower"));
+        assertEquals("You -100 in a crater.", myTestBoard2.getFieldMessage("Crater"));
+        assertEquals("You picked up a +100 note on the ground in Palace Gates.", myTestBoard2.getFieldMessage("Palace gates"));
+        assertEquals("You bought a thermal jacket, and -20 have been withdrawn from your balance.", myTestBoard2.getFieldMessage("Cold Desert"));
+        assertEquals("You received your salary of +180, from your work at Walled City.", myTestBoard2.getFieldMessage("Walled city"));
+        assertEquals("You are living your life as a monk/nun, your balance remains the same.", myTestBoard2.getFieldMessage("Monastery"));
+        assertEquals("You lost money from your pocket and can't find them in the black cave, you lost -70.", myTestBoard2.getFieldMessage("Black cave"));
+        assertEquals("You found a treasure chest containing +60.", myTestBoard2.getFieldMessage("Huts in the mountain"));
+        assertEquals("You just entered The Werewall! You have to throw the dice again to escape, cost -80.", myTestBoard2.getFieldMessage("The Werewall (werewolf-wall)"));
+        assertEquals("You fell down The Pit, a man will help you up, as long as you pay him 50.", myTestBoard2.getFieldMessage("The pit"));
+        assertEquals("Jackpot! You just found a pot of gold, which you sell for +650!", myTestBoard2.getFieldMessage("Goldmine"));
     }
 
     @org.junit.Test

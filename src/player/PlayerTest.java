@@ -12,8 +12,8 @@ public class PlayerTest {
         Player p1 = new Player();
         Player p2 = new Player();
 
-        assertEquals("player 1",p1.getName());
-        assertEquals("player 2",p2.getName());
+        assertEquals("Player 1",p1.getName());
+        assertEquals("Player 2",p2.getName());
     }
 
     @Test
